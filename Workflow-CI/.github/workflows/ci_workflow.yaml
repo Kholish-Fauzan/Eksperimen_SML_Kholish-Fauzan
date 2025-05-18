@@ -14,35 +14,41 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
-        python-version: '3.10'
+        python-version: '3.12'
 
     - name: Set up Conda
       uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
-        python-version: '3.10'
+        python-version: '3.12'
+
+    - name: Initialize Conda
+      shell: bash
+      run: |
+        conda init bash
+        source ~/.bashrc
 
     - name: Install dependencies
+      shell: bash
       run: |
-        conda env create -f MLProject/conda.yaml
+        source ~/.bashrc
+        conda env create -f MLProyek/conda.yaml
         conda activate mlflow-project
         pip install mlflow
 
     - name: Run MLflow Project
       id: mlflow_run
+      shell: bash
       run: |
+        source ~/.bashrc
+        conda init bash
+        source ~/.bashrc
         conda activate mlflow-project
-        mlflow run MLProject --no-conda
-        echo "run_id=$(mlflow runs list --experiment-name 'Mental Health Prediction CI' --output=text | awk 'NR==2{print $1}')" >> $GITHUB_OUTPUT
-
-    - name: Download MLflow Artifacts
-      uses: actions/download-artifact@v3
-      with:
-        name: mlflow-artifacts
-        path: mlflow-artifacts
+        mlflow run MLProyek
+        echo "run_id=$(mlflow runs list --experiment-name 'Mental Health Prediction with Tuning' --output=text | awk 'NR==2{print $1}')" >> $GITHUB_OUTPUT
 
     - name: Upload Model as Workflow Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: trained-model
-        path: mlflow-artifacts/mlruns/0/${{ steps.mlflow_run.outputs.run_id }}/artifacts/best_random_forest_model/
+        path: mlruns/304377800204603624/83b673627f414cef8b42a0b029790369/artifacts/best_random_forest_model/
