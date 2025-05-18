@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/LASKAR%20AI/Eksperimen_SML_Kholish-Fauzan/Membangun_model/mlruns/657107652518891232/d7c678a6ea6c44d2b9e32ba27d810665/artifacts
+end_time: 1747551799075
+entry_point_name: ''
+experiment_id: '657107652518891232'
+lifecycle_stage: active
+run_id: d7c678a6ea6c44d2b9e32ba27d810665
+run_name: casual-pig-278
+run_uuid: d7c678a6ea6c44d2b9e32ba27d810665
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747551784712
+status: 3
+tags: []
+user_id: fauza

@@ -1,0 +1,27 @@
+digest: 3d63bdfd
+name: dataset
+profile: '{"num_rows": 190, "num_elements": 4560}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "Gender_Female", "required":
+  true}, {"type": "double", "name": "Gender_Male", "required": true}, {"type": "double",
+  "name": "Education Level_BA", "required": true}, {"type": "double", "name": "Education
+  Level_BSc", "required": true}, {"type": "double", "name": "Education Level_BTech",
+  "required": true}, {"type": "double", "name": "Education Level_Class 10", "required":
+  true}, {"type": "double", "name": "Education Level_Class 11", "required": true},
+  {"type": "double", "name": "Education Level_Class 12", "required": true}, {"type":
+  "double", "name": "Education Level_Class 8", "required": true}, {"type": "double",
+  "name": "Education Level_Class 9", "required": true}, {"type": "double", "name":
+  "Education Level_MA", "required": true}, {"type": "double", "name": "Education Level_MSc",
+  "required": true}, {"type": "double", "name": "Education Level_MTech", "required":
+  true}, {"type": "double", "name": "Anxious Before Exams_No", "required": true},
+  {"type": "double", "name": "Anxious Before Exams_Yes", "required": true}, {"type":
+  "double", "name": "Academic Performance Change_Declined", "required": true}, {"type":
+  "double", "name": "Academic Performance Change_Improved", "required": true}, {"type":
+  "double", "name": "Academic Performance Change_Same", "required": true}, {"type":
+  "double", "name": "Age_binned_15-18", "required": true}, {"type": "double", "name":
+  "Age_binned_19-22", "required": true}, {"type": "double", "name": "Age_binned_23-26",
+  "required": true}, {"type": "double", "name": "Screen Time (hrs/day)", "required":
+  true}, {"type": "double", "name": "Sleep Duration (hrs)", "required": true}, {"type":
+  "double", "name": "Physical Activity (hrs/week)", "required": true}]}'
+source: '{"tags": {"mlflow.user": "fauza", "mlflow.source.name": "modelling.py", "mlflow.source.type":
+  "LOCAL", "mlflow.source.git.commit": "316a8897ee4612245697973e8bd4a67aaf17da5b"}}'
+source_type: code
